@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Oahu Collection | Luxury Vacation Rental Management Hawaii</title>
+  <meta name="description" content="The Oahu Collection offers boutique luxury vacation rental management for discerning property owners on Oahu, Hawaii. Maximize revenue, minimize headaches. Full-service management including dynamic pricing, guest relations, and concierge upsells." />
+  <meta name="keywords" content="oahu vacation rental management, luxury airbnb management oahu, hawaii short term rental management, ko olina vacation rental management, waikiki property management, oahu vrbo management, hawaii vacation rental company, oahu rental income management" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://theoahucollection.com/" />
+  <meta property="og:title" content="The Oahu Collection | Luxury Vacation Rental Management" />
+  <meta property="og:description" content="Boutique luxury vacation rental management on Oahu. We handle everything — your property earns more while you do less." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theoahucollection.com/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Oahu Collection",
+    "description": "Boutique luxury vacation rental management for property owners on Oahu, Hawaii.",
+    "url": "https://theoahucollection.com",
+    "telephone": "+1-808-000-0000",
+    "email": "owners@theoahucollection.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Honolulu", "addressRegion": "HI", "addressCountry": "US"},
+    "areaServed": {"@type": "Place", "name": "Oahu, Hawaii"},
+    "priceRange": "$$$$"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ocean: #0B4F6C;
+      --ocean-deep: #072E3F;
+      --coral: #D4845A;
+      --sand: #F7F3EE;
+      --sand-dark: #EDE6DA;
+      --text: #1A1A1A;
+      --muted: #6B6461;
+      --white: #FFFFFF;
+      --border: #E0D8CE;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 96px 0; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 22px 0; transition: all 0.3s; }
+    nav.scrolled { background: var(--ocean-deep); padding: 14px 0; box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; letter-spacing: 0.02em; }
+    .logo span { color: var(--coral); font-style: italic; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.83rem; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-btn { background: var(--coral); color: white !important; padding: 10px 22px; transition: opacity 0.2s !important; }
+    .nav-btn:hover { opacity: 0.85 !important; }
+
+    /* HERO */
+    .hero { min-height: 100vh; background: linear-gradient(150deg, var(--ocean-deep) 0%, #0d6080 60%, #0B4F6C 100%); display: flex; align-items: center; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, white, transparent); }
+    .hero-bg-text { position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-family: 'Playfair Display', serif; font-size: 22vw; color: rgba(255,255,255,0.03); font-style: italic; user-select: none; white-space: nowrap; }
+    .hero-content { position: relative; z-index: 2; padding: 120px 0 100px; max-width: 720px; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--coral); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 28px; }
+    .eyebrow-line { width: 36px; height: 1px; background: var(--coral); }
+    .hero h1 { font-size: clamp(3rem, 5.5vw, 4.8rem); color: white; margin-bottom: 24px; font-weight: 400; }
+    .hero h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.68); max-width: 540px; margin-bottom: 44px; font-weight: 300; line-height: 1.85; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 15px 34px; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.2s; }
+    .btn-coral { background: var(--coral); color: white; }
+    .btn-coral:hover { background: #c0734a; transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
+    .btn-ghost:hover { border-color: var(--coral); color: var(--coral); }
+    .roi-strip { display: flex; gap: 48px; margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+    .roi-item-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--coral); display: block; }
+    .roi-item-label { font-size: 0.77rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+    /* SECTION BASE */
+    .s-eyebrow { display: flex; align-items: center; gap: 10px; color: var(--coral); font-size: 0.73rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; }
+    .s-eyebrow::before { content: ''; width: 26px; height: 1px; background: var(--coral); }
+    .s-title { font-size: clamp(1.9rem, 3.2vw, 2.7rem); color: var(--ocean-deep); margin-bottom: 18px; }
+    .s-lead { font-size: 1rem; color: var(--muted); max-width: 580px; line-height: 1.85; }
+
+    /* REVENUE CALC */
+    .calc-section { background: var(--ocean-deep); }
+    .calc-section .s-title { color: white; }
+    .calc-section .s-lead { color: rgba(255,255,255,0.6); }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; align-items: center; }
+    .calc-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 48px; }
+    .calc-row { margin-bottom: 28px; }
+    .calc-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    .calc-input { width: 100%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 12px 16px; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; }
+    .calc-result { background: var(--coral); padding: 28px 32px; margin-top: 8px; }
+    .calc-result-label { font-size: 0.78rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .calc-result-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: white; }
+    .calc-explainer h3 { font-size: 1.8rem; color: white; margin-bottom: 20px; }
+    .calc-explainer p { color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.85; margin-bottom: 20px; }
+    .calc-list { list-style: none; }
+    .calc-list li { display: flex; gap: 12px; color: rgba(255,255,255,0.75); font-size: 0.9rem; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .calc-list li .ck { color: var(--coral); }
+
+    /* SERVICES */
+    .services-section { background: var(--sand); }
+    .services-wrap { margin-top: 60px; }
+    .service-row { display: grid; grid-template-columns: 80px 1fr; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--border); align-items: start; }
+    .service-row:first-child { border-top: 1px solid var(--border); }
+    .service-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--border); font-style: italic; }
+    .service-body h3 { font-size: 1.3rem; color: var(--ocean-deep); margin-bottom: 10px; }
+    .service-body p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tag { background: white; border: 1px solid var(--border); color: var(--ocean); font-size: 0.75rem; padding: 4px 12px; letter-spacing: 0.04em; }
+
+    /* FEE */
+    .fee-section { background: white; }
+    .fee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; background: var(--border); }
+    .fee-card { background: white; padding: 44px 36px; transition: background 0.25s; }
+    .fee-card:hover { background: var(--sand); }
+    .fee-card.main { background: var(--ocean-deep); }
+    .fee-label { font-size: 0.72rem; color: var(--coral); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 10px; font-weight: 500; }
+    .fee-name { font-size: 1.4rem; color: var(--ocean-deep); margin-bottom: 14px; }
+    .fee-card.main .fee-name { color: white; }
+    .fee-pct { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--ocean); font-weight: 400; line-height: 1; }
+    .fee-card.main .fee-pct { color: var(--coral); }
+    .fee-unit { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; margin-top: 4px; }
+    .fee-card.main .fee-unit { color: rgba(255,255,255,0.5); }
+    .fee-list { list-style: none; }
+    .fee-list li { font-size: 0.88rem; color: var(--muted); padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .fee-card.main .fee-list li { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.1); }
+    .fee-cta { display: inline-block; margin-top: 32px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--coral); border-bottom: 1px solid var(--coral); padding-bottom: 2px; }
+
+    /* PROCESS */
+    .process-section { background: var(--sand); }
+    .process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 60px; }
+    .p-step { padding: 32px 24px; border-right: 1px solid var(--border); text-align: center; }
+    .p-step:last-child { border-right: none; }
+    .p-num { width: 52px; height: 52px; border: 1px solid var(--ocean); color: var(--ocean); font-family: 'Playfair Display', serif; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .p-title { font-size: 0.95rem; color: var(--ocean-deep); margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+    .p-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+
+    /* AREAS */
+    .areas-section { background: var(--ocean-deep); }
+    .areas-section .s-title { color: white; }
+    .areas-section .s-lead { color: rgba(255,255,255,0.6); }
+    .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; background: rgba(255,255,255,0.05); }
+    .area { background: var(--ocean-deep); padding: 36px 28px; border-bottom: 2px solid transparent; transition: border-color 0.25s; }
+    .area:hover { border-color: var(--coral); }
+    .area h4 { font-size: 1.2rem; color: white; margin-bottom: 6px; }
+    .area p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+
+    /* TESTIMONIALS */
+    .testi-section { background: white; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+    .testi { border-left: 3px solid var(--coral); padding-left: 28px; }
+    .testi-quote { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--ocean-deep); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .testi-who { font-size: 0.82rem; color: var(--muted); }
+    .testi-who strong { display: block; color: var(--text); font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.88rem; margin-bottom: 2px; }
+
+    /* BLOG */
+    .blog-section { background: var(--sand); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 60px; }
+    .b-card { background: white; }
+    .b-img { height: 200px; background: linear-gradient(135deg, var(--ocean-deep), #1a7fa0); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+    .b-body { padding: 28px 24px; }
+    .b-cat { font-size: 0.7rem; color: var(--coral); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 10px; font-weight: 500; }
+    .b-title { font-size: 1.1rem; color: var(--ocean-deep); line-height: 1.4; margin-bottom: 12px; }
+    .b-card:hover .b-title { color: var(--coral); }
+    .b-excerpt { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+    /* CTA */
+    .cta-section { background: linear-gradient(135deg, var(--coral) 0%, #b8643a 100%); padding: 100px 0; text-align: center; }
+    .cta-section h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: white; margin-bottom: 20px; }
+    .cta-section p { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 500px; margin: 0 auto 40px; line-height: 1.8; }
+    .btn-white { background: white; color: var(--coral); padding: 16px 40px; font-weight: 500; }
+    .btn-white:hover { background: var(--sand); }
+
+    /* CONTACT */
+    .contact-section { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; }
+    .c-info h3 { font-size: 1.9rem; color: var(--ocean-deep); margin-bottom: 18px; }
+    .c-info p { font-size: 0.93rem; color: var(--muted); line-height: 1.8; margin-bottom: 32px; }
+    .c-detail { display: flex; gap: 12px; align-items: center; font-size: 0.9rem; margin-bottom: 16px; color: var(--text); }
+    .c-icon { color: var(--coral); font-size: 1.1rem; }
+    form { display: flex; flex-direction: column; gap: 14px; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    input, select, textarea { width: 100%; padding: 13px 16px; border: 1px solid var(--border); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text); outline: none; transition: border-color 0.2s; background: white; }
+    input:focus, select:focus, textarea:focus { border-color: var(--coral); }
+    textarea { min-height: 130px; resize: vertical; }
+    .f-submit { background: var(--ocean-deep); color: white; border: none; padding: 15px 36px; font-family: 'Inter', sans-serif; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; align-self: flex-start; }
+    .f-submit:hover { background: var(--coral); }
+
+    /* FOOTER */
+    footer { background: var(--ocean-deep); padding: 56px 0 28px; }
+    .f-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 48px; }
+    .f-brand p { color: rgba(255,255,255,0.4); font-size: 0.86rem; line-height: 1.7; margin-top: 14px; max-width: 260px; }
+    .f-col h4 { font-size: 0.7rem; color: var(--coral); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 18px; font-family: 'Inter', sans-serif; font-weight: 500; }
+    .f-col ul { list-style: none; }
+    .f-col li { margin-bottom: 9px; }
+    .f-col a { color: rgba(255,255,255,0.45); font-size: 0.86rem; transition: color 0.2s; }
+    .f-col a:hover { color: var(--coral); }
+    .f-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .f-bottom p, .f-bottom a { color: rgba(255,255,255,0.28); font-size: 0.78rem; }
+    .f-bottom a:hover { color: var(--coral); }
+
+    @media (max-width: 960px) {
+      .calc-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .fee-grid, .testi-grid, .blog-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+      .f-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      nav ul { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero-btns { flex-direction: column; }
+      .f-row { grid-template-columns: 1fr; }
+      .process-grid, .areas-grid { grid-template-columns: 1fr; }
+      .f-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="logo">The Oahu <span>Collection</span></a>
+        <ul class="nav-links">
+          <li><a href="#services">What We Do</a></li>
+          <li><a href="#fees">Fees</a></li>
+          <li><a href="#areas">Areas</a></li>
+          <li><a href="#blog">Insights</a></li>
+          <li><a href="#contact" class="nav-btn">Get Your Income Analysis</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text">Oahu</div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Luxury Vacation Rental Management · Oahu, Hawaii</div>
+        <h1>Your Property.<br /><em>Earning More.</em><br />Effortlessly.</h1>
+        <p class="hero-sub">The Oahu Collection is a boutique vacation rental management company built exclusively for luxury properties. We maximize your revenue, protect your investment, and handle every detail — so you never have to.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-coral">Get Your Free Income Analysis</a>
+          <a href="#services" class="btn btn-ghost">How We Manage</a>
+        </div>
+        <div class="roi-strip">
+          <div><span class="roi-item-num">25%</span><div class="roi-item-label">Management Fee</div></div>
+          <div><span class="roi-item-num">$500k+</span><div class="roi-item-label">Avg Property Gross/Year</div></div>
+          <div><span class="roi-item-num">24/7</span><div class="roi-item-label">Guest & Owner Support</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVENUE CALCULATOR -->
+  <section class="calc-section">
+    <div class="container">
+      <div class="s-eyebrow" style="color:var(--coral)"><span style="background:var(--coral);width:26px;height:1px;display:block"></span>Owner Tools</div>
+      <h2 class="s-title" style="color:white">How Much Can Your<br />Oahu Property Earn?</h2>
+      <p class="s-lead" style="color:rgba(255,255,255,0.6)">Most owners underestimate their property's potential by 30–50%. Use this quick estimator, then let us run a full analysis.</p>
+      <div class="calc-grid">
+        <div class="calc-box">
+          <div class="calc-row">
+            <div class="calc-label">Estimated Nightly Rate ($)</div>
+            <input class="calc-input" type="number" id="rate" value="850" oninput="calcROI()" />
+          </div>
+          <div class="calc-row">
+            <div class="calc-label">Estimated Occupancy (%)</div>
+            <input class="calc-input" type="number" id="occ" value="68" oninput="calcROI()" />
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-label">Estimated Annual Gross Revenue</div>
+            <div class="calc-result-num" id="gross">$211,edException</div>
+          </div>
+          <div class="calc-result" style="background:rgba(255,255,255,0.08); margin-top:2px;">
+            <div class="calc-result-label" style="color:rgba(255,255,255,0.5)">Your Net After Our 25% Fee</div>
+            <div class="calc-result-num" id="net" style="color:white;font-size:2rem">—</div>
+          </div>
+        </div>
+        <div class="calc-explainer">
+          <h3>We Outperform Self-Managed Properties by an Average of 32%</h3>
+          <p>Dynamic pricing, professional photography, multi-channel distribution, and concierge upsells combine to maximize every booking. Most owners who switch to us see higher net returns — even after our fee.</p>
+          <ul class="calc-list">
+            <li><span class="ck">✓</span> PriceLabs dynamic pricing — rates adjust daily to market demand</li>
+            <li><span class="ck">✓</span> Listed on Airbnb, VRBO, Booking.com + our direct channel</li>
+            <li><span class="ck">✓</span> Professional photography &amp; listing optimization included</li>
+            <li><span class="ck">✓</span> Concierge upsells (chef, yacht, transfers) — revenue-shared with owner</li>
+            <li><span class="ck">✓</span> Monthly revenue report with market benchmarking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL SERVICES -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="s-eyebrow">Full-Service Management</div>
+      <h2 class="s-title">We Handle Every Detail.<br />You Collect the Returns.</h2>
+      <div class="services-wrap">
+        <div class="service-row">
+          <div class="service-num">01</div>
+          <div class="service-body">
+            <h3>Revenue Management & Dynamic Pricing</h3>
+            <p>We use PriceLabs and real-time market data to price your property competitively every single day — capturing peak demand and preventing dead nights. Most properties see 15–25% revenue increases vs. static pricing.</p>
+            <div class="service-tags"><span class="tag">PriceLabs</span><span class="tag">Daily Rate Optimization</span><span class="tag">Demand Forecasting</span><span class="tag">Competitive Analysis</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">02</div>
+          <div class="service-body">
+            <h3>Multi-Channel Listing & Distribution</h3>
+            <p>Your property is listed and optimized across every major platform — Airbnb, VRBO, Booking.com — plus our own direct booking site, which captures commission-free reservations and repeat guests.</p>
+            <div class="service-tags"><span class="tag">Airbnb</span><span class="tag">VRBO</span><span class="tag">Booking.com</span><span class="tag">Direct Booking Site</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">03</div>
+          <div class="service-body">
+            <h3>Professional Photography & Listing Optimization</h3>
+            <p>Luxury properties deserve luxury presentation. We coordinate professional photography, write compelling listing copy, and continuously A/B test titles and descriptions to maximize click-through and conversion.</p>
+            <div class="service-tags"><span class="tag">Professional Photography</span><span class="tag">Virtual Tour</span><span class="tag">Listing Copywriting</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">04</div>
+          <div class="service-body">
+            <h3>Guest Communication & Experience</h3>
+            <p>From first inquiry to post-departure review, we handle every guest interaction. Fast response times, local insider guides, and a hospitality mindset that generates 5-star reviews consistently.</p>
+            <div class="service-tags"><span class="tag">24/7 Guest Support</span><span class="tag">Check-in Coordination</span><span class="tag">Local Guide</span><span class="tag">Review Management</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">05</div>
+          <div class="service-body">
+            <h3>Housekeeping & Turnover Coordination</h3>
+            <p>Our trusted cleaning teams are trained to luxury hospitality standards. Every turnover is inspected before the next guest arrives — linen quality, amenity restocking, staging — every time.</p>
+            <div class="service-tags"><span class="tag">Professional Cleaning</span><span class="tag">Linen Service</span><span class="tag">Amenity Restocking</span><span class="tag">Quality Inspection</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">06</div>
+          <div class="service-body">
+            <h3>Maintenance & Property Protection</h3>
+            <p>We coordinate all maintenance through our vetted vendor network, bill transparently, and conduct routine property inspections between stays. Your property stays in peak condition — year round.</p>
+            <div class="service-tags"><span class="tag">Preventive Maintenance</span><span class="tag">Emergency Response</span><span class="tag">Vendor Management</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">07</div>
+          <div class="service-body">
+            <h3>Concierge Upsells & Owner Revenue Share</h3>
+            <p>We offer guests curated upsells — private chefs, yacht charters, airport transfers, helicopter tours — and share the commission revenue with owners. It's an income stream most management companies keep for themselves.</p>
+            <div class="service-tags"><span class="tag">Private Chef</span><span class="tag">Yacht Charter</span><span class="tag">Airport Transfer</span><span class="tag">Revenue Share</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="fee-section" id="fees">
+    <div class="container">
+      <div class="s-eyebrow">Transparent Pricing</div>
+      <h2 class="s-title">Simple, Honest Fees.<br />No Surprises.</h2>
+      <p class="s-lead">We believe in complete fee transparency. What you see is what you pay — no hidden charges, no nickel-and-diming.</p>
+      <div class="fee-grid">
+        <div class="fee-card">
+          <div class="fee-label">Standard</div>
+          <h3 class="fee-name">Management Only</h3>
+          <div class="fee-pct">28%</div>
+          <div class="fee-unit">of gross rental revenue</div>
+          <ul class="fee-list">
+            <li><span class="ck" style="color:var(--coral)">✓</span> Revenue management</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> OTA listing management</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Guest communication</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Cleaning coordination</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Monthly owner reports</li>
+          </ul>
+          <a href="#contact" class="fee-cta">Get Started →</a>
+        </div>
+        <div class="fee-card main">
+          <div class="fee-label">Most Popular</div>
+          <h3 class="fee-name" style="color:white">Full Service</h3>
+          <div class="fee-pct">25%</div>
+          <div class="fee-unit">of gross rental revenue</div>
+          <ul class="fee-list">
+            <li><span class="ck">✓</span> Everything in Standard</li>
+            <li><span class="ck">✓</span> Direct booking website</li>
+            <li><span class="ck">✓</span> Professional photography</li>
+            <li><span class="ck">✓</span> Concierge upsell program</li>
+            <li><span class="ck">✓</span> Revenue share with owner</li>
+            <li><span class="ck">✓</span> Quarterly strategy call</li>
+          </ul>
+          <a href="#contact" class="fee-cta">Get Started →</a>
+        </div>
+        <div class="fee-card">
+          <div class="fee-label">Premium</div>
+          <h3 class="fee-name">Elite Portfolio</h3>
+          <div class="fee-pct">22%</div>
+          <div class="fee-unit">for 3+ property portfolios</div>
+          <ul class="fee-list">
+            <li><span class="ck" style="color:var(--coral)">✓</span> Everything in Full Service</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Dedicated account manager</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Priority maintenance</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Annual property review</li>
+            <li><span class="ck" style="color:var(--coral)">✓</span> Revenue benchmarking</li>
+          </ul>
+          <a href="#contact" class="fee-cta">Inquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <div class="container">
+      <div class="s-eyebrow">Getting Started</div>
+      <h2 class="s-title">Onboarding Takes Less<br />Than Two Weeks</h2>
+      <div class="process-grid">
+        <div class="p-step"><div class="p-num">1</div><h4 class="p-title">Income Analysis</h4><p class="p-desc">Free property assessment and revenue projection — no obligation, no pressure.</p></div>
+        <div class="p-step"><div class="p-num">2</div><h4 class="p-title">Agreement &amp; Setup</h4><p class="p-desc">We sign the management agreement and begin property documentation and onboarding.</p></div>
+        <div class="p-step"><div class="p-num">3</div><h4 class="p-title">Photography &amp; Listing</h4><p class="p-desc">Professional shoot, optimized listing creation, and pricing strategy implementation.</p></div>
+        <div class="p-step"><div class="p-num">4</div><h4 class="p-title">Go Live</h4><p class="p-desc">Your property goes live across all channels simultaneously, priced to capture first bookings fast.</p></div>
+        <div class="p-step"><div class="p-num">5</div><h4 class="p-title">Ongoing Management</h4><p class="p-desc">We handle everything. You receive monthly reports, direct deposits, and peace of mind.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="areas-section" id="areas">
+    <div class="container">
+      <div class="s-eyebrow" style="color:var(--coral)"><span style="background:var(--coral);width:26px;height:1px;display:block"></span>Where We Operate</div>
+      <h2 class="s-title">Legal, Permitted,<br />High-Performing Properties Only</h2>
+      <p class="s-lead">We exclusively manage properties in Oahu's legally permitted short-term rental zones. No gray areas. No regulatory risk for owners.</p>
+      <div class="areas-grid">
+        <div class="area"><h4>Ko Olina</h4><p>Resort-zoned community with luxury oceanfront units</p></div>
+        <div class="area"><h4>Waikiki Resort Zone</h4><p>High-demand resort-designated properties</p></div>
+        <div class="area"><h4>Turtle Bay</h4><p>North Shore resort community, world-class surf location</p></div>
+        <div class="area"><h4>Princeville Adj.</h4><p>Premium permitted inventory near resort zones</p></div>
+        <div class="area"><h4>Condo-Hotels</h4><p>Resort-registered condo-hotel units island-wide</p></div>
+        <div class="area"><h4>Other Permitted Areas</h4><p>Legally zoned STR-eligible properties — inquire</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-section">
+    <div class="container">
+      <div class="s-eyebrow">Owner Reviews</div>
+      <h2 class="s-title">What Our Owners Say</h2>
+      <div class="testi-grid">
+        <div class="testi">
+          <p class="testi-quote">"We were self-managing and earning about $90k a year. The Oahu Collection took over and we netted $127k after their fee in year one. The math speaks for itself."</p>
+          <div class="testi-who"><strong>Patricia &amp; Marcus W.</strong>Ko Olina Property Owner · Seattle, WA</div>
+        </div>
+        <div class="testi">
+          <p class="testi-quote">"The monthly reports are better than what most property managers send quarterly. Revenue breakdown, guest feedback, market comparison — exactly what an investor needs to see."</p>
+          <div class="testi-who"><strong>James T.</strong>2-Property Portfolio Owner · San Jose, CA</div>
+        </div>
+        <div class="testi">
+          <p class="testi-quote">"Five stars across 87 reviews in our first year. Guests love the experience and we get repeat bookings without lifting a finger. This team is exceptional."</p>
+          <div class="testi-who"><strong>Yuki N.</strong>Waikiki Resort Property Owner · Osaka, Japan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-section" id="blog">
+    <div class="container">
+      <div class="s-eyebrow">Owner Resources</div>
+      <h2 class="s-title">Insights for the<br />Informed Owner</h2>
+      <div class="blog-grid">
+        <div class="b-card">
+          <div class="b-img">🏖️</div>
+          <div class="b-body">
+            <div class="b-cat">Revenue Strategy</div>
+            <h3 class="b-title">How Much Can Your Oahu Vacation Rental Really Earn in 2025?</h3>
+            <p class="b-excerpt">Hawaii's average daily rate is $528 statewide — but luxury properties in the right zones can earn $800–$1,500/night. Here's the real revenue math broken down by property type and location.</p>
+          </div>
+        </div>
+        <div class="b-card">
+          <div class="b-img">⚖️</div>
+          <div class="b-body">
+            <div class="b-cat">Regulations</div>
+            <h3 class="b-title">Oahu Short-Term Rental Rules: What Every Owner Must Know</h3>
+            <p class="b-excerpt">Oahu's STR regulations are among the strictest in the US. This guide explains exactly which properties are legally eligible, what happens if you're out of compliance, and how to protect your investment.</p>
+          </div>
+        </div>
+        <div class="b-card">
+          <div class="b-img">📈</div>
+          <div class="b-body">
+            <div class="b-cat">Management</div>
+            <h3 class="b-title">Self-Managing vs. Professional Management: The True Cost Comparison</h3>
+            <p class="b-excerpt">Most owners think they save money by self-managing. After accounting for pricing losses, time cost, guest issues, and maintenance oversights, the math almost always favors professional management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to See What Your<br />Property Can Really Earn?</h2>
+      <p>Get a free, no-obligation income analysis from our team. We'll show you exactly what your property should be generating — and how we get you there.</p>
+      <a href="#contact" class="btn btn-white">Get My Free Income Analysis</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="c-info">
+          <div class="s-eyebrow">Start Here</div>
+          <h3>Request Your Free<br />Income Analysis</h3>
+          <p>Tell us about your property and we'll prepare a custom revenue projection — what your property could earn under professional management, with real comps and market data.</p>
+          <div class="c-detail"><span class="c-icon">📞</span>(808) 000-0000</div>
+          <div class="c-detail"><span class="c-icon">✉️</span>owners@theoahucollection.com</div>
+          <div class="c-detail"><span class="c-icon">📍</span>Serving Oahu's Permitted STR Zones</div>
+        </div>
+        <form onsubmit="handleSub(event)">
+          <div class="f-row">
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" />
+          <input type="text" placeholder="Property Address or Area" />
+          <select>
+            <option value="" disabled selected>Property Type</option>
+            <option>Resort-zoned condo</option>
+            <option>Condo-hotel unit</option>
+            <option>Single family (resort zone)</option>
+            <option>Other — let's discuss</option>
+          </select>
+          <textarea placeholder="Tell us about your property — bedrooms, current management situation, goals..."></textarea>
+          <button type="submit" class="f-submit">Request Free Analysis</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="f-grid">
+        <div class="f-brand">
+          <div class="logo">The Oahu <span>Collection</span></div>
+          <p>Boutique luxury vacation rental management for Oahu's finest permitted properties. Maximum returns, minimum hassle.</p>
+        </div>
+        <div class="f-col"><h4>Services</h4><ul><li><a href="#services">Revenue Management</a></li><li><a href="#services">Guest Experience</a></li><li><a href="#services">Listing Optimization</a></li><li><a href="#services">Concierge Upsells</a></li></ul></div>
+        <div class="f-col"><h4>Areas</h4><ul><li><a href="#areas">Ko Olina</a></li><li><a href="#areas">Waikiki Resort</a></li><li><a href="#areas">Turtle Bay</a></li><li><a href="#areas">Condo Hotels</a></li></ul></div>
+        <div class="f-col"><h4>Company</h4><ul><li><a href="#fees">Our Fees</a></li><li><a href="#blog">Owner Insights</a></li><li><a href="#contact">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+      </div>
+      <div class="f-bottom">
+        <p>© 2026 The Oahu Collection, LLC. All rights reserved. · Honolulu, Hawaii</p>
+        <p><a href="privacy.html">Privacy</a> · <a href="mailto:owners@theoahucollection.com">owners@theoahucollection.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 50));
+    function calcROI() {
+      const rate = parseFloat(document.getElementById('rate').value) || 0;
+      const occ = parseFloat(document.getElementById('occ').value) || 0;
+      const gross = rate * 365 * (occ / 100);
+      const net = gross * 0.75;
+      document.getElementById('gross').textContent = '$' + Math.round(gross).toLocaleString();
+      document.getElementById('net').textContent = '$' + Math.round(net).toLocaleString();
+    }
+    calcROI();
+    function handleSub(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.f-submit');
+      btn.textContent = "We'll be in touch within 24 hours!";
+      btn.style.background = 'var(--coral)';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
