@@ -2,9 +2,5 @@ services:
   - type: web
     name: the-oahu-collection
     runtime: static
-    buildCommand: echo "Static site"
-    staticPublishPath: .
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    staticPublishPath: public
+    buildCommand: ""
