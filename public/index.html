@@ -161,7 +161,7 @@
     /* PROCESS */
     .process-section { background: var(--sand); }
     .process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 60px; }
-    .p-step { padding: 32px 24px; border-right: 1px solid var(--border); text-align: center; }
+    .p-step { padding: 32px 24px; border-right: 1px solid var(--border); text-align: center; position: relative; }.p-step:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 36px; font-size: 1rem; color: rgba(201,169,110,.55); z-index: 2; pointer-events: none; }@media(max-width:900px){.p-step:not(:last-child)::after{display:none}}
     .p-step:last-child { border-right: none; }
     .p-num { width: 52px; height: 52px; border: 1px solid var(--ocean); color: var(--ocean); font-family: 'Playfair Display', serif; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
     .p-title { font-size: 0.95rem; color: var(--ocean-deep); margin-bottom: 10px; font-family: 'Playfair Display', serif; }
