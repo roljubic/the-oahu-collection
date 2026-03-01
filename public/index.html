@@ -100,6 +100,7 @@
     .btn-coral:hover { background: #c0734a; transform: translateY(-1px); }
     .btn-ghost { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
     .btn-ghost:hover { border-color: var(--coral); color: var(--coral); }
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--coral), #e8a87c); z-index: 9999; transition: width 0.1s linear; }
     .roi-strip { display: flex; gap: 48px; margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
     .roi-item-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--coral); display: block; }
     .roi-item-label { font-size: 0.77rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
@@ -248,6 +249,7 @@
   </style>
 </head>
 <body>
+  <div id="scroll-progress"></div>
 
   <nav id="nav">
     <div class="container">
@@ -277,8 +279,8 @@
           <a href="#services" class="btn btn-ghost">How We Manage</a>
         </div>
         <div class="roi-strip">
-          <div><span class="roi-item-num">25%</span><div class="roi-item-label">Management Fee</div></div>
-          <div><span class="roi-item-num">$500k+</span><div class="roi-item-label">Avg Property Gross/Year</div></div>
+          <div><span class="roi-item-num" data-count="25" data-prefix="" data-suffix="%">0%</span><div class="roi-item-label">Management Fee</div></div>
+          <div><span class="roi-item-num" data-count="500" data-prefix="$" data-suffix="k+">$0</span><div class="roi-item-label">Avg Property Gross/Year</div></div>
           <div><span class="roi-item-num">24/7</span><div class="roi-item-label">Guest & Owner Support</div></div>
         </div>
       </div>
@@ -610,7 +612,13 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 50));
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', scrollY > 50);
+      const scrolled = (scrollY / (document.documentElement.scrollHeight - innerHeight)) * 100;
+      if (progressBar) progressBar.style.width = Math.min(scrolled, 100) + '%';
+    });
     function calcROI() {
       const rate = parseFloat(document.getElementById('rate').value) || 0;
       const occ = parseFloat(document.getElementById('occ').value) || 0;
@@ -620,6 +628,29 @@
       document.getElementById('net').textContent = '$' + Math.round(net).toLocaleString();
     }
     calcROI();
+    // Animated counters
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.count);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = prefix + Math.round(target * ease) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+    const counterEls = document.querySelectorAll('.roi-item-num[data-count]');
+    if (counterEls.length) {
+      const cObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); cObs.unobserve(e.target); } });
+      }, { threshold: 0.5 });
+      counterEls.forEach(el => cObs.observe(el));
+    }
+
     function handleSub(e) {
       e.preventDefault();
       const btn = e.target.querySelector('.f-submit');
