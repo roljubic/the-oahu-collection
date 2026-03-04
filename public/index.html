@@ -83,6 +83,11 @@
     .nav-links a:hover { color: var(--coral); }
     .nav-btn { background: var(--coral); color: white !important; padding: 10px 22px; transition: opacity 0.2s !important; }
     .nav-btn:hover { opacity: 0.85 !important; }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-burger span { display: block; width: 24px; height: 1px; background: #fff; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
     /* HERO */
     .hero { min-height: 100vh; background: linear-gradient(150deg, var(--ocean-deep) 0%, #0d6080 60%, #0B4F6C 100%); display: flex; align-items: center; position: relative; overflow: hidden; }
@@ -237,7 +242,33 @@
       .process-grid { grid-template-columns: 1fr 1fr; }
       .areas-grid { grid-template-columns: 1fr 1fr; }
       .f-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-      nav ul { display: none; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 66px; left: 0; right: 0;
+        background: rgba(7,46,63,0.97);
+        backdrop-filter: blur(18px);
+        padding: 28px 40px;
+        gap: 0;
+        border-bottom: 2px solid var(--coral);
+        z-index: 99;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .nav-links.open { opacity: 1; transform: translateY(0); pointer-events: all; }
+      .nav-links li { opacity: 0; transform: translateY(-6px); transition: opacity 0.25s ease, transform 0.25s ease; min-height: 44px; display: flex; align-items: center; }
+      .nav-links.open li:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
+      .nav-links.open li:nth-child(2) { opacity:1; transform:none; transition-delay:0.10s; }
+      .nav-links.open li:nth-child(3) { opacity:1; transform:none; transition-delay:0.15s; }
+      .nav-links.open li:nth-child(4) { opacity:1; transform:none; transition-delay:0.20s; }
+      .nav-links.open li:nth-child(5) { opacity:1; transform:none; transition-delay:0.25s; }
+      .nav-links a { min-height: 44px; display: flex; align-items: center; }
+      .mob-backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:98; }
+      .mob-backdrop.open { display:block; }
     }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.5rem; }
@@ -279,6 +310,7 @@
           <li><a href="#blog">Insights</a></li>
           <li><a href="#contact" class="nav-btn">Get Your Income Analysis</a></li>
         </ul>
+        <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
       </div>
     </div>
   </nav>
@@ -658,6 +690,22 @@
       document.getElementById('net').textContent = '$' + Math.round(net).toLocaleString();
     }
     calcROI();
+    // Mobile menu
+    (function(){
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('.nav-links');
+      const backdrop = document.createElement('div');
+      backdrop.className = 'mob-backdrop';
+      document.body.appendChild(backdrop);
+      function toggle(open) {
+        burger.classList.toggle('open', open);
+        nav.classList.toggle('open', open);
+        backdrop.classList.toggle('open', open);
+      }
+      burger.addEventListener('click', () => toggle(!nav.classList.contains('open')));
+      backdrop.addEventListener('click', () => toggle(false));
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+    })();
     // Animated counters
     function animateCounter(el) {
       const target = parseInt(el.dataset.count);
