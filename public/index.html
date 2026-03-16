@@ -778,5 +778,41 @@
 .mobile-cta-btn{display:block;text-align:center;background:#c9a96e;color:#0a0e18;font-size:0.9rem;font-weight:600;letter-spacing:0.06em;padding:14px 20px;border-radius:4px;text-decoration:none;}
 @media(max-width:768px){.mobile-cta-bar{display:block;}}
 </style>
+
+<!-- HOKU: Scroll-Triggered Lead Capture Modal (fires at 70% scroll, once per session) -->
+<div id="scroll-modal" style="display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;background:rgba(0,0,0,0.72);backdrop-filter:blur(4px);">
+  <div style="background:#0a0e18;border:1px solid rgba(201,169,110,0.3);border-radius:8px;max-width:480px;width:90%;padding:40px 36px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,0.6);">
+    <button onclick="closeScrollModal()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:#888;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
+    <div style="color:#c9a96e;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px;">One Moment</div>
+    <h3 style="color:#f5f0e8;font-size:1.75rem;font-weight:400;line-height:1.25;margin:0 0 16px;">Are You Leaving Money on Your O'ahu Rental Property?</h3>
+    <p style="color:#a89880;font-size:0.9rem;line-height:1.65;margin:0 0 28px;">Self-managing hosts on O'ahu leave an average of 18–24% gross revenue on the table through suboptimal pricing and booking gaps. A free revenue review takes 15 minutes and shows you exactly what you're missing.</p>
+    <a href="#contact" onclick="closeScrollModal()" style="display:block;text-align:center;background:#c9a96e;color:#0a0e18;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:16px 24px;border-radius:4px;text-decoration:none;margin-bottom:12px;">Get a Free Revenue Review →</a>
+    <p style="text-align:center;color:#666;font-size:0.75rem;margin:0;">No obligation. No sales pressure.</p>
+  </div>
+</div>
+<script>
+(function(){
+  if(sessionStorage.getItem('oahu_col_modal_shown')) return;
+  var fired=false;
+  window.addEventListener('scroll',function(){
+    if(fired) return;
+    var scrolled=(window.scrollY+window.innerHeight)/document.documentElement.scrollHeight;
+    if(scrolled>=0.70){
+      fired=true;
+      sessionStorage.setItem('oahu_col_modal_shown','1');
+      var m=document.getElementById('scroll-modal');
+      m.style.opacity='0';
+      m.style.display='flex';
+      setTimeout(function(){m.style.transition='opacity 0.35s';m.style.opacity='1';},20);
+    }
+  },{passive:true});
+})();
+function closeScrollModal(){
+  var m=document.getElementById('scroll-modal');
+  m.style.transition='opacity 0.25s';
+  m.style.opacity='0';
+  setTimeout(function(){m.style.display='none';},260);
+}
+<\/script>
 </body>
 </html>
