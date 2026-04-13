@@ -470,6 +470,53 @@
   </div>
 </div>
 
+  <!-- RESULTS STRIP -->
+  <div id="results-strip" style="background:#0a2e3d;padding:48px 0;border-top:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;text-align:center;">
+      <div>
+        <div class="results-num" data-target="28" style="font-family:'Playfair Display',serif;font-size:3rem;color:#c9a96e;font-weight:400;">0</div>
+        <div style="font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">% Avg Revenue Lift</div>
+      </div>
+      <div>
+        <div class="results-num" data-target="97" style="font-family:'Playfair Display',serif;font-size:3rem;color:#c9a96e;font-weight:400;">0</div>
+        <div style="font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">% Owner Retention</div>
+      </div>
+      <div>
+        <div class="results-num" data-target="4" style="font-family:'Playfair Display',serif;font-size:3rem;color:#c9a96e;font-weight:400;">0</div>
+        <div style="font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Hr Response Guarantee</div>
+      </div>
+      <div>
+        <div class="results-num" data-target="72" style="font-family:'Playfair Display',serif;font-size:3rem;color:#c9a96e;font-weight:400;">0</div>
+        <div style="font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Hr Listing Live</div>
+      </div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:3rem;color:#c9a96e;font-weight:400;">4.9★</div>
+        <div style="font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Avg Guest Rating</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.25);margin:24px 0 0;letter-spacing:1px;">BASED ON MANAGED PORTFOLIO PERFORMANCE</p>
+  </div>
+  <script>
+  (function(){
+    var els = document.querySelectorAll('#results-strip .results-num');
+    var started = false;
+    function countUp(){
+      if(started) return; started = true;
+      els.forEach(function(el){
+        var target = parseInt(el.getAttribute('data-target'),10);
+        var duration = 1600; var step = Math.ceil(duration / target);
+        var current = 0;
+        var timer = setInterval(function(){
+          current += 1; el.textContent = current;
+          if(current >= target){ el.textContent = target; clearInterval(timer); }
+        }, step);
+      });
+    }
+    var obs = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting) countUp(); }); }, {threshold:0.3});
+    els.forEach(function(el){ obs.observe(el); });
+  })();
+  </script>
+
   <!-- REVENUE CALCULATOR -->
   <section class="calc-section">
     <div class="container">
